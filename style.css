@@ -1,0 +1,237 @@
+/* Google Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5; /* Light grey background for soft contrast */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container Styling */
+.container {
+  max-width: 750px; /* Slightly wider container */
+  width: 90%; /* Responsive width */
+  margin: 30px auto; /* Adjust margin for centering */
+  background: white;
+  padding: 45px 50px; /* More padding for spacious feel */
+  border-radius: 20px; /* Softer rounded corners */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08); /* More prominent, soft shadow */
+  animation: fadeIn 1.2s ease-in-out; /* Slightly longer animation */
+  text-align: center; /* Center header content */
+  border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+/* Profile Image */
+.profile-pic {
+  border-radius: 50%;
+  width: 140px; /* Slightly larger */
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  border: 6px solid #4CAF50; /* Vibrant border color (Green accent) */
+  box-shadow: 0 0 0 10px rgba(76, 175, 80, 0.1); /* Subtle glow effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05) rotate(2deg); /* Subtle hover animation */
+}
+
+/* Typography */
+h1 {
+  font-size: 2.6em; /* Larger and more impactful */
+  margin: 0;
+  color: #1a202c; /* Darker heading color */
+  font-weight: 700; /* Bolder */
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-weight: 400; /* Slightly more prominent */
+  color: #6a737d;
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
+h2 {
+  font-size: 1.8em; /* Larger section titles */
+  color: #2d3748; /* Dark grey */
+  margin-top: 50px; /* More space above sections */
+  margin-bottom: 15px;
+  position: relative;
+  text-align: left; /* Align section titles left */
+  padding-bottom: 10px; /* Space for the underline */
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px; /* Longer underline */
+  height: 4px; /* Thicker underline */
+  background: linear-gradient(90deg, #4CAF50, #8bc34a); /* Green gradient for headings */
+  margin-top: 8px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0; /* Align to the left */
+  bottom: 0; /* Position at the bottom of the padding */
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px; /* More spacing between sections */
+  text-align: left; /* Ensure text aligns left within sections */
+}
+
+ul {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0;
+  color: #4a5568;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px; /* Space for custom bullet/icon */
+}
+
+ul li i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50; /* Icon color */
+    font-size: 1.1em;
+}
+
+a {
+  color: #4CAF50; /* Green accent for links */
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #388E3C; /* Darker green on hover */
+  text-decoration: underline;
+}
+
+/* Social Links & Buttons */
+.socials {
+  margin-top: 20px; /* More space */
+  display: flex;
+  gap: 15px; /* Space between social links */
+  justify-content: center; /* Center social links */
+}
+
+.social-link, .download-btn {
+  display: inline-flex; /* Align icon and text */
+  align-items: center;
+  background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Green gradient */
+  color: white;
+  padding: 12px 25px; /* More padding for larger buttons */
+  border-radius: 10px; /* Softer border radius */
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3); /* Subtle button shadow */
+}
+
+.social-link i, .download-btn i {
+    margin-right: 8px; /* Space between icon and text */
+    color: white; /* Ensure icon is white */
+}
+
+.social-link:hover, .download-btn:hover {
+  background: linear-gradient(45deg, #388E3C, #689F38); /* Darker gradient on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.4); /* More prominent shadow on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-group {
+  margin-bottom: 25px; /* More space between skill groups */
+  background-color: #f9f9f9; /* Light background for skill groups */
+  padding: 18px 25px; /* Padding inside */
+  border-radius: 12px;
+  border: 1px solid #e9e9e9; /* Subtle border */
+  transition: all 0.3s ease;
+}
+
+.skill-group:hover {
+    background-color: #f3fdf4; /* Very light green on hover */
+    border-color: #d4edda; /* Green tint border */
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1); /* Subtle shadow on hover */
+}
+
+.skill-group h3 {
+  font-size: 1.1em; /* Slightly larger heading */
+  color: #4CAF50; /* Accent color for skill group headings */
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-group h3 i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Larger icons */
+}
+
+.skill-group p {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 30px 25px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .socials {
+    flex-direction: column; /* Stack social links vertically on small screens */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-link, .download-btn {
+    width: 90%; /* Make buttons wider */
+    justify-content: center; /* Center text/icon within button */
+  }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
